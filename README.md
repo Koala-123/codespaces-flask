@@ -8,6 +8,7 @@ Everything you do here is contained within this one codespace. There is no repos
 
 To run this application:
 
+https://prod.liveshare.vsengsaas.visualstudio.com/join?C6DDEF8AB5FB68974C750790E763D76A6FBA
 ```
 flask --debug run
 ```
