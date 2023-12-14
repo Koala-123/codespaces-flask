@@ -11,21 +11,61 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        .body {
+            background-color: black;
+        }
+
+        .text {
+            color: snow;
+            font-size: 25px;
+            margin: 30px;
+        }
+
+        .App-header {
+            font-size: 50px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: snow;
+
+        }
+    </style>
+
 
 </head>
+<body class = "body">
 
-<body>
-    {%block content%}
-    <header class="App-header">
-        <h1>
-            Welcome!!
-        </h1>
-    </header>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('home')}}">Focify</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{url_for('customise')}}">Customise</a></li>
+        <li><a href="{{url_for('about')}}">About Us</a></li>
+      </ul>
+    </div>
     
-    <button class="btn btn-info" onclick="start()">Start</button>
+</nav>
+{%block content%}
+    <header class="App-header">
+        <center>
+        <h1>
+            <p1>Welcome!!</p1>
+        </h1>
+    </center> 
+    </header>  
     
     <script src="main.js"></script>
+    <p class = "text">This is a productivity app which runs on a ingenious software designed by voyagers house </p>
+
+    <br><br>
+    <center>
+        <a href="{{ url_for('customise') }}">
+            <button class="btn btn-primary">Get Started</button>
+         </a>
+    </center> 
     {% endblock %}
-</body>
+    </body>
 
 </html>
